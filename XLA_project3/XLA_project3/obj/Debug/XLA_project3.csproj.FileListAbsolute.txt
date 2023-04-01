@@ -1,0 +1,11 @@
+D:\Document\FILE_XU_LI_ANH\XLA_project3\XLA_project3\bin\Debug\XLA_project3.exe.config
+D:\Document\FILE_XU_LI_ANH\XLA_project3\XLA_project3\bin\Debug\XLA_project3.exe
+D:\Document\FILE_XU_LI_ANH\XLA_project3\XLA_project3\bin\Debug\XLA_project3.pdb
+D:\Document\FILE_XU_LI_ANH\XLA_project3\XLA_project3\obj\Debug\XLA_project3.csproj.AssemblyReference.cache
+D:\Document\FILE_XU_LI_ANH\XLA_project3\XLA_project3\obj\Debug\XLA_project3.csproj.SuggestedBindingRedirects.cache
+D:\Document\FILE_XU_LI_ANH\XLA_project3\XLA_project3\obj\Debug\XLA_project3.Form1.resources
+D:\Document\FILE_XU_LI_ANH\XLA_project3\XLA_project3\obj\Debug\XLA_project3.Properties.Resources.resources
+D:\Document\FILE_XU_LI_ANH\XLA_project3\XLA_project3\obj\Debug\XLA_project3.csproj.GenerateResource.cache
+D:\Document\FILE_XU_LI_ANH\XLA_project3\XLA_project3\obj\Debug\XLA_project3.csproj.CoreCompileInputs.cache
+D:\Document\FILE_XU_LI_ANH\XLA_project3\XLA_project3\obj\Debug\XLA_project3.exe
+D:\Document\FILE_XU_LI_ANH\XLA_project3\XLA_project3\obj\Debug\XLA_project3.pdb
