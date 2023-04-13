@@ -62,7 +62,7 @@ def optimal_threshold2(h,t1,t2):
     h2 = h[t1:t2]
     h3 = h[t2:]
     #compute the 2 centroids 
-    if(np.sum(h1)==0 or np.sum(h2)==0 or np.sum(h3)==0):
+    if(np.sum(h1)==0 or np.sum(h2)==0 or np.sum(h3)==0): #chặn trường hợp tổng histogram = 0, phép tính sẽ lỗi
         print("1 trong 2 khoảng này không có đỉnh nên không tính đc threshold")
         t1_new = 0
         t2_new = 0
@@ -74,6 +74,7 @@ def optimal_threshold2(h,t1,t2):
         # sau đó chia cho tổng giá trị trong khoảng tọa độ đó, tương tụ với Y nhưng ngược lại
         #trong xử lí ảnh, thì tọa độ trung tâm này gọi là "average (mean) intensity values" tương ứng với khoảng được chia ra trong 
         #histogram (trang 742 chương 10 mục Basic global threshold)
+        #Công thức 10.3-6
         m1 = np.sum(  h1*np.arange(0,t1)   )  /  np.sum(h1) 
         m2 = np.sum(  h2*np.arange(t1,t2)  )  /  np.sum(h2)
         m3 = np.sum(  h3*np.arange(t2, len(h))  )  /  np.sum(h3)
@@ -83,7 +84,7 @@ def optimal_threshold2(h,t1,t2):
         t2_new = np.round((m2+m3)/2).astype(int)
         print(m1,m2,m3,t1,t2)
         #print(t1_new,t2_new)
-        if((t1_new != t1) and (t2_new != t2)): return optimal_threshold2(h,t1_new,t2_new)  #điều kiện so sánh deltaT
+        if((t1_new != t1) and (t2_new != t2)): return optimal_threshold2(h,t1_new,t2_new)  #điều kiện so sánh deltaT ()
     return t1_new, t2_new
 
 
@@ -159,7 +160,7 @@ def Segmentation1(average, nguong1):
 # =========================================================================================
 
 #khai báo đường dẫn file hình
-filehinh = r'bird_small.jpg'
+filehinh = r'lena_color.jpg'
 
 #đọc ảnh màu sử dụng thư viện opencv
 img = cv2.imread(filehinh, cv2.IMREAD_COLOR)
@@ -172,7 +173,7 @@ luminance = tinhmucxam(imgPIL)
 #tinh histogram
 his = tinh_histogram(luminance)
 #tinh threshold
-t1,t2= optimal_threshold2(his,50,200) #14 to 227
+t1,t2= optimal_threshold2(his,100,140) #14 to 227
 #phan doan anh
 seg = Segmentation2(luminance,t1,t2)
 
